@@ -12,6 +12,10 @@ function Home() {
     }
   };
 
+  const handleBrowseClick = () => {
+    navigate('/browse');
+  };
+
   return (
     <div className="home-container">
       <nav className="home-nav">
@@ -22,7 +26,7 @@ function Home() {
           </div>
           <div className="nav-links">
             <a href="#" className="nav-link" onClick={(e) => e.preventDefault()}>Home</a>
-            <a href="/browse" className="nav-link">Browse</a>
+            <a href="#" className="nav-link" onClick={(e) => { e.preventDefault(); handleBrowseClick(); }}>Browse</a>
             <a href="#" className="nav-link" onClick={(e) => { e.preventDefault(); alert('Feature not implemented'); }}>My Library</a>
             <button className="nav-signin" onClick={() => alert('Feature not implemented')}>Sign In</button>
           </div>
