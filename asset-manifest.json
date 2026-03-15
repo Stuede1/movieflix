@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/movieflix/static/css/main.39295dae.css",
-    "main.js": "/movieflix/static/js/main.d29e489d.js",
+    "main.js": "/movieflix/static/js/main.061d79fd.js",
     "static/js/453.f6065fb8.chunk.js": "/movieflix/static/js/453.f6065fb8.chunk.js",
     "index.html": "/movieflix/index.html",
     "main.39295dae.css.map": "/movieflix/static/css/main.39295dae.css.map",
-    "main.d29e489d.js.map": "/movieflix/static/js/main.d29e489d.js.map",
+    "main.061d79fd.js.map": "/movieflix/static/js/main.061d79fd.js.map",
     "453.f6065fb8.chunk.js.map": "/movieflix/static/js/453.f6065fb8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.39295dae.css",
-    "static/js/main.d29e489d.js"
+    "static/js/main.061d79fd.js"
   ]
 }
