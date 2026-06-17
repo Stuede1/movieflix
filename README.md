@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+# MovieFlix
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive movie browsing and discovery application built with React. Search any title, browse curated random picks, view full movie details, and simulate a checkout flow — all powered by the OMDb API.
 
-## Available Scripts
+**Live Demo:** [stuede1.github.io/movieflix](https://stuede1.github.io/movieflix)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+MovieFlix lets users search the OMDb movie database by title, browse randomly surfaced films by genre, filter and sort results, and click through to a detail-rich checkout page with dynamic pricing. The app is a single-page application with client-side routing via React Router.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Live movie search** — queries the OMDb API by title with automatic fallback handling for short or ambiguous search terms
+- **Browse mode** — surfaces up to 9 random movies from a rotating pool of genre keywords, with one-click refresh
+- **Sort & filter** — sort results by title (A–Z / Z–A) or release year, and filter by year from a dynamically generated dropdown
+- **Movie detail & checkout** — full metadata view (plot, director, cast, awards, runtime, IMDb rating with star display) plus quantity selection and dynamically calculated pricing
+- **Animated landing page** — scrolling film-reel animation and floating cinema icons built with CSS
+- **Example search chips** — one-click suggested searches on the home screen
+- **Fallback poster handling** — graceful image fallback for movies with no poster in the API response
+- **GitHub Pages deployment** — automated build and deploy with `gh-pages`
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Layer | Technology |
+|---|---|
+| Framework | React 19 (Create React App) |
+| Language | JavaScript (JSX) |
+| Routing | React Router v7 |
+| HTTP Client | Axios |
+| Styling | Custom CSS |
+| Movie Data | OMDb API |
+| Deployment | GitHub Pages |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## App Routes
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Route | Description |
+|---|---|
+| `/` | Home page with search bar and animated landing section |
+| `/results/:searchTerm` | Search results grid with sort and year filter controls |
+| `/browse` | Random movie discovery with refresh button |
+| `/checkout/:movieId` | Full movie detail view with purchase sidebar |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
 
-## Learn More
+- Node.js 18+
+- npm
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone https://github.com/Stuede1/movieflix.git
+cd movieflix
+npm install
+```
 
-### Code Splitting
+### Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+Open [http://localhost:3000/movieflix](http://localhost:3000/movieflix) in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Build
 
-### Making a Progressive Web App
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Deploy to GitHub Pages
 
-### Advanced Configuration
+```bash
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## External API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Movie data is sourced from the [OMDb API](https://www.omdbapi.com/).
 
-### `npm run build` fails to minify
+| Endpoint | Usage |
+|---|---|
+| `?s=<title>` | Search movies by title, returns up to 10 results per page |
+| `?i=<imdbID>` | Fetch full detail for a single movie by IMDb ID |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Project Structure
+
+```
+src/
+├── App.js                  # Router setup and route definitions
+├── Pages/
+│   ├── Home.jsx            # Landing page with search and animation
+│   ├── Results.jsx         # Search results with sort and filter
+│   ├── Browse.jsx          # Random movie discovery
+│   └── Checkout.jsx        # Movie detail and purchase flow
+├── utils/
+│   └── movieUtils.js       # Shared API helpers and filter/sort logic
+├── index.css               # Global styles
+└── App.css                 # App-level styles
+```
+
+---
+
+## Author
+
+**Cole Stuedeman** — [GitHub](https://github.com/Stuede1) · [LinkedIn](https://www.linkedin.com/in/cole-stuedeman) · [Portfolio](https://colestuedeman.dev)
