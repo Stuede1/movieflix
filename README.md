@@ -116,6 +116,30 @@ src/
 
 ---
 
+## Testing
+
+The project includes a comprehensive test suite built with **Jest** and **React Testing Library**, covering three layers:
+
+| Layer | File | Tests |
+|---|---|---|
+| Unit | `src/utils/movieUtils.test.js` | 22 |
+| Integration | `src/Pages/Results.test.jsx` | 9 |
+| Component | `src/Pages/Home.test.jsx` | 14 |
+
+### Run Tests
+
+```bash
+npm test
+```
+
+### What's Covered
+
+- **Pure utility logic** — `processMovieResults`, `getFilteredMovies`, `extractYears` with edge cases (NaN years, failed responses, empty arrays)
+- **Async data fetching** — mocked Axios calls verifying loading spinners, successful renders, API error handling, and network failure states
+- **User interactions** — form submission with validation (empty, whitespace, special characters), sort/filter dropdowns, navigation via buttons and links, search chip population
+
+---
+
 ## Author
 
 **Cole Stuedeman** — [GitHub](https://github.com/Stuede1) · [LinkedIn](https://www.linkedin.com/in/cole-stuedeman) · [Portfolio](https://colestuedeman.dev)
