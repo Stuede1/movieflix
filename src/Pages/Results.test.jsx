@@ -1,3 +1,20 @@
+/**
+ * INTEGRATION TESTS — Results.jsx
+ *
+ * Category: Async data fetching + component integration
+ * Strategy: Mock Axios at the module level to simulate API success, API-level
+ *           errors (Response: "False"), and network failures. Verify that the
+ *           component transitions through loading → data/error states correctly
+ *           and that user actions (sort, filter, navigation) work post-fetch.
+ *
+ * Covers:
+ *  - Loading state rendered while awaiting API
+ *  - Successful render of movie cards from mocked OMDb responses
+ *  - Graceful handling of API "Movie not found" errors
+ *  - Graceful handling of network-level rejections
+ *  - Navigation to checkout and home routes via user clicks
+ *  - Sort and year-filter controls updating the rendered list
+ */
 import { render, screen, waitFor, fireEvent } from '@testing-library/react';
 import axios from 'axios';
 import Results from './Results';

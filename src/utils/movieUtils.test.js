@@ -1,3 +1,16 @@
+/**
+ * UNIT TESTS — movieUtils.js
+ *
+ * Category: Pure function / logic testing
+ * Strategy: Test each utility in isolation with deterministic inputs.
+ *           Axios is mocked so no real HTTP calls are made.
+ *
+ * Covers:
+ *  - fetchMovieById: API call construction and error propagation
+ *  - processMovieResults: data normalization, fallback poster logic, filtering invalid entries
+ *  - extractYears: deduplication, NaN handling, descending sort
+ *  - getFilteredMovies: year filtering, five sort modes, immutability guarantee
+ */
 import axios from 'axios';
 import {
   fetchMovieById,

@@ -1,3 +1,18 @@
+/**
+ * COMPONENT / USER INTERACTION TESTS — Home.jsx
+ *
+ * Category: User event simulation + DOM assertions
+ * Strategy: Render the component with react-router-dom fully mocked (no real
+ *           routing needed). Simulate real user behavior — typing, submitting
+ *           forms, clicking buttons — and assert on navigation calls and DOM state.
+ *
+ * Covers:
+ *  - Static render: title, subtitle, search input, search button
+ *  - Form submission: valid input triggers navigation, empty/whitespace blocked
+ *  - Input sanitization: trimming whitespace, encoding special characters
+ *  - Example search chips: clicking populates the search input
+ *  - Navigation links: Browse link fires correct navigate call
+ */
 import { render, screen, fireEvent } from '@testing-library/react';
 import Home from './Home';
 
