@@ -2,7 +2,7 @@
 
 A responsive movie browsing and discovery application built with React. Search any title, browse curated random picks, view full movie details, and simulate a checkout flow — all powered by the OMDb API.
 
-**Live Demo:** [stuede1.github.io/movieflix](https://stuede1.github.io/movieflix)
+**Live Demo:** [movieflix-cole-stuedeman.vercel.app](https://movieflix-cole-stuedeman.vercel.app/)
 
 ---
 
