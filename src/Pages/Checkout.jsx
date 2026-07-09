@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const API_KEY = "bd939714";
 const BASE_URL = "https://www.omdbapi.com/?apikey=bd939714";
 
 function Checkout() {
@@ -23,6 +22,7 @@ function Checkout() {
 
   useEffect(() => {
     fetchMovieDetails();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [movieId]);
 
   const fetchMovieDetails = async () => {

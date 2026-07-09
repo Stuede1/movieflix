@@ -3,7 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { fetchMovieById, processMovieResults, extractYears, getFilteredMovies } from '../utils/movieUtils';
 
-const API_KEY = "bd939714";
 const BASE_URL = "https://www.omdbapi.com/?apikey=bd939714";
 
 function Results() {
@@ -18,6 +17,7 @@ function Results() {
 
   useEffect(() => {
     searchMovies(searchTerm);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm]);
 
   const searchMovies = async (searchTerm) => {
