@@ -1,6 +1,6 @@
 {
   "name": "movieflix",
-  "homepage": "https://stuede1.github.io/movieflix/",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
