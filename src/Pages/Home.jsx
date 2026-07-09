@@ -25,9 +25,12 @@ function Home() {
             <span>MovieFlix</span>
           </div>
           <div className="nav-links">
-            <button className="nav-link" onClick={() => {}}>Home</button>
-            <button className="nav-link" onClick={handleBrowseClick}>Browse</button>
-            <button className="nav-link" onClick={() => alert('Feature not implemented')}>My Library</button>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a href="/" className="nav-link" onClick={(e) => e.preventDefault()}>Home</a>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a href="/browse" className="nav-link" onClick={(e) => { e.preventDefault(); handleBrowseClick(); }}>Browse</a>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a href="#" className="nav-link" onClick={(e) => { e.preventDefault(); alert('Feature not implemented'); }}>My Library</a>
             <button className="nav-signin" onClick={() => alert('Feature not implemented')}>Sign In</button>
           </div>
         </div>
