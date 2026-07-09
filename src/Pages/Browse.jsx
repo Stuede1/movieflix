@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { fetchMovieById, processMovieResults, extractYears, getFilteredMovies } from '../utils/movieUtils';
 
-const API_KEY = "bd939714";
 const BASE_URL = "https://www.omdbapi.com/?apikey=bd939714";
 
 function Browse() {
@@ -25,6 +24,7 @@ function Browse() {
 
   useEffect(() => {
     fetchRandomMovies();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchRandomMovies = async () => {
